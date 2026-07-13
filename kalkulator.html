@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenSite - Kalkulator Recycle</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+   
+<header>
+    <div class="navbar-container">
+        <!-- Logo Besar di Belah Kiri -->
+        <h1 class="logo-utama">♻️ GreenSite</h1>
+        
+       
+        <nav class="menu-utama">
+            <a href="index.html">Utama</a>
+            <a href="harga.html">Harga</a>
+            <a href="kalkulator.html">Kalkulator</a>
+            <a href="lokasi.html">Lokasi</a>
+            <a href="tips.html">Tip</a>
+            <a href="customer-service.html">Khidmat Pelanggan</a>
+</nav>
+        </nav>
+    </div>
+</header>
+
+
+<div class="slogan-bawah">
+    <p>Kitar Semula, Kini Lebih Mudah</p>
+</div>
+    <section id="kalkulator">
+        <h2>Kalkulator Kitar Semula</h2>
+        <div class="box">
+            <select id="material"></select>
+            <input type="number" id="qty" placeholder="Masukkan kuantiti (unit/kg)">
+            <button onclick="tambahKeResit()">Tambah Ke Resit</button>
+            <p id="result" style="color: black; font-weight: bold; margin-top: 10px;"></p>
+            <p id="motivation" style="color: #06402a; font-weight: 600;"></p>
+        </div>
+
+        <div id="resitArea" style="max-width: 500px; margin: 30px auto; background: rgba(255,255,255,0.95); padding: 20px; border-radius: 20px; color: black; display: none; overflow-x: auto;">
+            <h3 style="color: #06402a; margin-top: 0;">🧾 Resit Maya Kitar Semula</h3>
+            <table id="jadualResit" style="width: 100%; border-collapse: collapse; text-align: left; margin-bottom: 15px;">
+                <thead>
+                    <tr style="border-bottom: 2px solid #06402a;">
+                        <th style="padding: 8px;">Bahan</th>
+                        <th style="padding: 8px;">Kuantiti</th>
+                        <th style="padding: 8px;">Harga (RM)</th>
+                    </tr>
+                </thead>
+                <tbody id="isiResit"></tbody>
+            </table>
+            <h4 id="jumlahBesar" style="margin: 5px 0; text-align: right; font-size: 18px;">Jumlah Keseluruhan: RM 0.00</h4>
+            <button onclick="padamResit()" style="background: #cc0000; margin-top: 10px;">Padam Semua</button>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,677 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-image: url('background greensite.png'); 
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.20);
+  z-index: -1;
+}
+
+
+
+header {
+  background-color: #021f14; 
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+  box-sizing: border-box;
+}
+
+.navbar-container {
+  max-width: 1400px; 
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; 
+  height: 100px; 
+}
+
+.logo-utama {
+  font-size: 50px;
+  font-weight: bold;
+  color: rgb(7, 165, 65);
+  -webkit-text-stroke: 2px #dadada;
+  margin: 0;
+  margin-right: 60px; 
+  white-space: nowrap;
+}
+
+
+nav.menu-utama a { 
+  border: 2px solid #06402a; 
+  border-radius: 8px; 
+  color: #06402a; 
+  padding: 14px 28px; 
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+
+nav.menu-utama a:hover {
+  background: #06402a; 
+  color: #ffffff; 
+  text-shadow: none; 
+  transform: translateY(-3px); 
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+.slogan-bawah {
+  text-align: center;
+  margin-top: 110px; /* Jarak supaya tidak tenggelam di bawah fixed navbar */
+  margin-bottom: 20px; /* Gap sebelum masuk ke seksyen kandungan */
+}
+
+.slogan-bawah p {
+  font-size: 22px;
+  font-weight: 600;
+  color: #06402a; /* Warna hijau gelap tulisan asal */
+  margin: 0;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+/* Menyesuaikan titik mula elemen body */
+body {
+  padding-top: 0; /* Dikembalikan ke 0 kerana kita guna margin-top pada slogan */
+}
+
+/* Gaya Pautan Menu di Kanan */
+nav.menu-utama {
+  margin-top: 0;
+  display: flex;
+  gap: 10px;
+}
+ 
+
+/* Kesan apabila tetikus lalu (Hover) pada menu */
+nav.menu-utama a:hover {
+  background: #06402a; /* Tukar jadi warna hijau gelap penuh */
+  color: #ffffff; /* Tulisan tukar jadi putih */
+  text-shadow: none; /* Buang outline putih masa hover supaya teks jelas */
+  transform: translateY(-2px); /* Kotak naik atas sikit */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Memastikan kandungan web bermula di bawah navbar */
+body {
+  padding-top: 100px; 
+}
+
+/* Gaya untuk Logo / Nama Web */
+header h1 {
+  font-size: 24px; /* Dikecilkan supaya sebaris dengan menu */
+  font-weight: bold;
+  color: white;
+  margin: 0 40px 0 0; /* Jarak 40px di sebelah kanan logo */
+  white-space: nowrap;
+}
+/* --- GAYA TAJUK DENGAN OUTLINE & KOTAK SECTION --- */
+
+/* --- GAYA KOTAK SECTION (HIJAU GELAP TRANSPARENT) & TAJUK BARU --- */
+
+section {
+  max-width: 1100px;
+  margin: 40px auto; /* Jarak antara kotak-kotak section */
+  padding: 40px 20px;
+  text-align: center;
+  color: white; /* Semua teks biasa di dalam kotak akan automatik jadi putih */
+  
+  /* RGBA: 2, 31, 20 ialah kod warna hijau gelap navbar anda, 0.85 ialah tahap ketelusan (transparent) */
+  background: rgba(2, 31, 20, 0.85); 
+  
+  backdrop-filter: blur(10px); /* Kesan blur moden pada gambar latar di belakang kotak */
+  border: 2px solid #119c56; /* Tukar border kepada hijau cerah sikit supaya kotak nampak menonjol */
+  border-radius: 20px; /* Lengkungan bucu kotak */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+}
+
+h2 {
+  color: #ffffff; /* Tukar tulisan tajuk jadi PUTIH supaya cerah atas latar belakang gelap */
+  font-family: 'Poppins', 'Segoe UI', sans-serif; 
+  font-size: 32px;           
+  font-weight: bold;           
+  text-transform: uppercase; 
+  letter-spacing: 2px;       
+  
+  /* Kesan OUTLINE HIAJU GELAP di sekeliling tulisan putih supaya nampak sharp */
+  text-shadow: 
+    -2px -2px 0 #021f14,  
+     2px -2px 0 #021f14,
+    -2px  2px 0 #021f14,
+     2px  2px 0 #021f14,
+     3px  3px 0px rgba(0, 0, 0, 0.4); 
+  
+  margin-bottom: 30px;
+  margin-top: 0;
+}
+
+/* Gaya untuk Kontainer Menu */
+nav.menu-utama {
+  margin-top: 0; /* Buang margin lama */
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Jarak rapat antara pautan menu */
+}
+
+/* Gaya untuk Pautan Menu (Text Links) */
+nav.menu-utama a {
+  background: transparent; /* Buang latar belakang putih asal */
+  border: none; /* Buang border bulat asal */
+  color: #ffffff; /* Warna teks putih */
+  padding: 10px 16px;
+  border-radius: 8px; /* Kotak rounded yang lembut */
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  display: inline-block;
+}
+
+/* Kesan Hover & Aktif (Seperti butang HOSTING dalam gambar) */
+nav.menu-utama a:hover {
+  background: rgba(255, 255, 255, 0.15); /* Kotak cerah semi-transparent */
+  color: #ffffff;
+}
+
+/* Mengelakkan kandungan halaman terlindung di bawah navbar yang 'fixed' */
+body {
+  padding-top: 80px; /* Tambah ruang atas supaya kandungan tidak tenggelam */
+}
+
+/* --- RESPONSIVE UNTUK TELEFON --- */
+@media(max-width: 768px) {
+  .navbar-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  header h1 {
+    margin-bottom: 5px;
+  }
+  nav.menu-utama {
+    flex-wrap: wrap;
+  }
+  nav.menu-utama a {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+  body {
+    padding-top: 120px; /* Lebihan ruang untuk telefon */
+  }
+}
+/* Kesan Hover & Aktif (Seperti butang HOSTING dalam gambar) */
+nav.menu-utama a:hover {
+  background: rgba(255, 255, 255, 0.15); /* Kotak cerah semi-transparent */
+  color: #ffffff;
+}
+
+/* Mengelakkan kandungan halaman terlindung di bawah navbar yang 'fixed' */
+body {
+  padding-top: 80px; /* Tambah ruang atas supaya kandungan tidak tenggelam */
+}
+
+/* --- RESPONSIVE UNTUK TELEFON --- */
+@media(max-width: 768px) {
+  .navbar-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  header h1 {
+    margin-bottom: 5px;
+  }
+  nav.menu-utama {
+    flex-wrap: wrap;
+  }
+  nav.menu-utama a {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+  body {
+    padding-top: 120px; /* Lebihan ruang untuk telefon */
+  }
+}
+
+section {
+  padding: 60px 20px;
+  text-align: center;
+  color: white;
+}
+
+/* HARGA */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  position: relative;
+  background: rgba(255,255,255,0.93);
+  color: #0b4d2b;
+  padding: 20px;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: 0.3s;
+  box-shadow: -10px 10px rgb(6,64,42);
+  animation: fadeIn 1s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(6, 64, 42, 0.3);
+  background: #ffffff;
+}
+
+.card span {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.criteria {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  background: rgba(0,70,30,0.95);
+  color: white;
+  padding: 15px;
+  transition: 0.4s;
+}
+
+.card:hover .criteria {
+  bottom: 0;
+}
+
+/* KALKULATOR */
+.box {
+  margin: auto;
+  background: rgba(255,255,255,0.92);
+  padding: 25px;
+  width: 300px;
+  height: auto;
+  border-style: solid;
+  border-color: #06402a;
+  border-radius: 20px;
+  color: black;
+}
+
+.box select, .box input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: none;
+  box-sizing: border-box;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: #0b4b2b;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #119c56;
+  box-shadow: 0 0 15px #119c56, 0 0 25px #0b4b2b;
+  transition: 0.3s;
+}
+
+button:active {
+  transform: scale(0.95); 
+  transition: 0.1s;
+}
+
+/* MAP */
+#map {
+  height: 450px;
+  border-radius: 20px;
+  margin-top: 20px;
+  display: none;
+}
+
+/* POSTER */
+.posterGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.poster {
+  background: rgba(255,255,255,0.95);
+  border-radius: 20px;
+  overflow: hidden;
+  color: #0b4d2b;
+  transition: 0.4s;
+}
+
+.poster:hover {
+  transform: scale(1.03);
+}
+
+.poster img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.posterText {
+  padding: 20px;
+}
+
+.posterText h3 {
+  margin-top: 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RESPONSIVE PHONE */
+@media(max-width:600px) {
+  header h1 { font-size: 35px; }
+  header { padding: 30px 10px; }
+  nav a { display: inline-block; margin: 6px; width: auto; }
+  section { padding: 40px 10px; }
+  .grid { grid-template-columns: 1fr; }
+  .box { width: 80%; height: auto; }
+  #map { height: 350px; }
+  .posterGrid { grid-template-columns: 1fr; }
+}
+
+/* --- GAYA AUTO SLIDER KESAN FAKTA ALAM SEKITAR --- */
+
+.slider-container {
+  max-width: 800px;
+  height: 350px;
+  margin: 30px auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  border: 2px solid #119c56;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0; /* Sembunyikan slide asal */
+  transition: opacity 1s ease-in-out; /* Kesan 'fade' lembut semasa bertukar */
+  z-index: 1;
+}
+
+.slide.active {
+  opacity: 1; /* Paparkan slide yang aktif sahaja */
+  z-index: 2;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Memastikan gambar penuh tanpa herot */
+}
+
+/* Kotak teks fakta di atas gambar (Lapisan lutsinar gelap) */
+.slide-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(2, 31, 20, 0.8); /* Warna hijau gelap pekat transparent */
+  color: white;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.slide-text h3 {
+  margin: 0 0 5px 0;
+  font-size: 20px;
+  color: #119c56; /* Warna tajuk fakta */
+}
+
+.slide-text p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+/* Responsif untuk skrin telefon pintar */
+@media (max-width: 600px) {
+  .slider-container {
+    height: 250px;
+  }
+  .slide-text h3 {
+    font-size: 16px;
+  }
+  .slide-text p {
+    font-size: 12px;
+  }
+}
+
+/* ==========================================================================
+   KOD CSS KHAS UNTUK HALAMAN CUSTOMER SERVICE (GREEN SITE)
+   ========================================================================== */
+
+/* Kontainer Utama Halaman */
+.sokongan-wrapper {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+/* 1. KAD UTAMA BOT AI (KOTAK ATAS) */
+.kad-ai-utama {
+    background: rgba(2, 31, 20, 0.85);
+    border: 2px solid #119c56;
+    border-radius: 15px;
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    margin-bottom: 40px;
+    backdrop-filter: blur(10px);
+}
+
+/* Animasi Robot Melayang Comel */
+.bot-animasi {
+    font-size: 60px;
+    margin-bottom: 15px;
+    display: inline-block;
+    animation: robotMelayang 3s ease-in-out infinite;
+}
+
+@keyframes robotMelayang {
+    0% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(5deg); }
+    100% { transform: translateY(0px) rotate(0deg); }
+}
+
+/* 2. KOTAK BORANG ADUAN HIJAU (KOTAK BAWAH) */
+.borang-aduan {
+    background: rgba(2, 31, 20, 0.75); /* Hijau gelap lutsinar korporat */
+    padding: 35px;
+    border-radius: 12px;
+    border: 2px solid #119c56; /* Garisan tepi hijau terang */
+    text-align: left;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    box-sizing: border-box;
+}
+
+.borang-aduan {
+            background: rgba(2, 31, 20, 0.75); /* Ditukar kepada warna hijau gelap lutsinar */
+            padding: 30px;
+            border-radius: 12px;
+            border: 2px solid #119c56; /* Garisan tepi hijau yang lebih terang */
+            text-align: left;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+            backdrop-filter: blur(10px);
+        }
+
+/* 3. ELEMEN ELEMEN INPUT DI DALAM BORANG */
+.input-kumpulan {
+    margin-bottom: 20px;
+}
+
+/* Label Input */
+.input-kumpulan label {
+    display: block;
+    color: #a5d6a7; /* Hijau lembut pastel */
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Kotak Isi Borang (Input & Textarea) */
+.input-kumpulan input, 
+.input-kumpulan textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid rgba(17, 156, 86, 0.6);
+    background: rgba(1, 15, 10, 0.6); /* Gelap di dalam input supaya teks putih jelas */
+    color: #cdcdcd;
+    font-size: 15px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+/* Kesan Apabila Pengguna Klik Pada Input (Focus Effect) */
+.input-kumpulan input:focus, 
+.input-kumpulan textarea:focus {
+    border-color: #26d07c;
+    box-shadow: 0 0 8px rgba(38, 208, 124, 0.4);
+    background: rgba(1, 15, 10, 0.8);
+}
+
+/* Mengawal Saiz Textarea Sahaja */
+.input-kumpulan textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* --- GAYA TINGKAP CHAT POP-UP --- */
+.kotak-chat-rahsia {
+    position: fixed;
+    bottom: -500px; /* Sembunyi di bawah skrin pada asal */
+    right: 30px;
+    width: 350px;
+    height: 450px;
+    background: #021f14;
+    border: 2px solid #119c56;
+    border-radius: 15px 15px 0 0;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+    z-index: 9999;
+    transition: bottom 0.4s ease-in-out; /* Kesan slide up lancar */
+}
+
+/* Apabila chat dibuka */
+.kotak-chat-rahsia.buka {
+    bottom: 0;
+}
+
+.chat-header {
+    background: #119c56;
+    color: white;
+    padding: 15px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 12px 12px 0 0;
+}
+
+.chat-body {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.mesej-bot {
+    background: rgba(17, 156, 86, 0.2);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 15px 15px 15px 0;
+    max-width: 80%;
+    align-self: flex-start;
+    font-size: 14px;
+}
+
+.mesej-user {
+    background: #119c56;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 15px 15px 0 15px;
+    max-width: 80%;
+    align-self: flex-end;
+    font-size: 14px;
+}
+
+.chat-footer {
+    padding: 10px;
+    display: flex;
+    gap: 8px;
+    border-top: 1px solid rgba(17, 156, 86, 0.3);
+}
+
+.chat-footer input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #119c56;
+    background: rgba(255,255,255,0.05);
+    color: white;
+    border-radius: 20px;
+    outline: none;
+}
+
+.chat-footer button {
+    background: #119c56;
+    color: white;
+    border: none;
+    padding: 0 15px;
+    border-radius: 20px;
+    cursor: pointer;
+}

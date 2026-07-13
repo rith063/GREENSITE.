@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenSite - Pusat Kitar Semula Berdekatan</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Pautan CSS Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+</head>
+<body>
+
+  
+<header>
+    <div class="navbar-container">
+       
+        <h1 class="logo-utama">♻️ GreenSite</h1>
+        
+       
+        <nav class="menu-utama">
+            <a href="index.html">Utama</a>
+            <a href="harga.html">Harga</a>
+            <a href="kalkulator.html">Kalkulator</a>
+            <a href="lokasi.html">Lokasi</a>
+            <a href="tips.html">Tip</a>
+            <a href="customer-service.html">Khidmat Pelanggan</a>
+</nav>
+        </nav>
+    </div>
+</header>
+
+
+<div class="slogan-bawah">
+    <p>Kitar Semula, Kini Lebih Mudah</p>
+</div>
+    <section id="lokasi">
+        <h2>Pusat Kitar Semula Berdekatan</h2>
+        <button onclick="findLocation()" style="max-width: 250px; margin-bottom: 20px;">Cari Lokasi Saya</button>
+        <div id="map"></div>
+    </section>
+
+    
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

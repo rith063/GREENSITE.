@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sokongan AI & Bantuan - GreenSite</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* CSS Khas untuk Halaman Sokongan */
+        .sokongan-wrapper {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+        .kad-ai-utama {
+            background: rgba(2, 31, 20, 0.85);
+            border: 2px solid #119c56;
+            border-radius: 15px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            margin-bottom: 40px;
+            backdrop-filter: blur(10px);
+        }
+        .bot-animasi {
+            font-size: 60px;
+            animation: pusing 4s linear infinite;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+        .borang-aduan {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid rgba(17, 156, 86, 0.3);
+            text-align: left;
+        }
+        .borang-aduan h3 {
+            margin-top: 0;
+            color: #084b05;
+            border-bottom: 1px solid #119c56;
+            padding-bottom: 10px;
+        }
+        .input-kumpulan {
+            margin-bottom: 15px;
+        }
+        .input-kumpulan label {
+            display: block;
+            color: #a5d6a7;
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+        .input-kumpulan input, .input-kumpulan textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #119c56;
+            background: rgba(2, 31, 20, 0.5);
+            color: rgb(6, 69, 7);
+            border-radius: 6px;
+            box-sizing: border-box;
+        }
+        @keyframes pusing {
+            0% { transform: rotate(0deg) translateY(0px); }
+            50% { transform: rotate(10deg) translateY(-10px); }
+            100% { transform: rotate(0deg) translateY(0px); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR HERO (Sama seperti halaman lain) -->
+    <header class="header-utama">
+        <div class="logo-utama">♻️ GreenSite</div>
+        <nav class="menu-utama">
+            <a href="index.html">Utama</a>
+            <a href="harga.html">Harga</a>
+            <a href="kalkulator.html">Kalkulator</a>
+            <a href="lokasi.html">Lokasi</a>
+            <a href="tips.html">Tip</a>
+            <a href="customer-service.html" class="active">Khidmat Pelanggan</a>
+        </nav>
+    </header>
+
+   <div class="sokongan-wrapper">
+        <!-- BAHAGIAN 1: BOT SEMBANG AI -->
+        <div class="kad-ai-utama">
+            <div class="bot-animasi">🤖</div>
+            <!-- TUKAR TAJUK DI SINI -->
+            <h2 style="color: white; margin: 10px 0;">Khidmat Pelanggan Greensite</h2>
+            <p style="color: #e0f2f1; max-width: 600px; margin: 0 auto 25px auto;">
+                Ada sebarang masalah atau soalan? Hubungi AI Khidmat Pelanggan kami untuk bantuan serta-merta 24/7!
+            </p>
+            <button class="btn-mula" onclick="bukaSembangAI()" style="padding: 15px 40px; font-size: 16px; cursor: pointer;">
+                Mula Sembang Sekarang 💬
+            </button>
+        </div>
+
+        <!-- BAHAGIAN 2: BORANG ADUAN -->
+        <div class="borang-aduan">
+            <!-- TUKAR TAJUK DI SINI -->
+            <h3>📩 Hubungi Talian Sokongan Pelanggan</h3>
+            <p style="color: #ccc; font-size: 13px; margin-bottom: 20px;">Jika bot AI kami tidak dapat menyelesaikan isu anda, sila hantar tiket bantuan di bawah untuk dihubungkan kepada ejen manusia.</p>
+            
+            ... 
+            <form onsubmit="hantarAduan(event)">
+                <div class="input-kumpulan">
+                    <label>Nama Penuh</label>
+                    <input type="text" required placeholder="Masukkan nama anda">
+                </div>
+                <div class="input-kumpulan">
+                    <label>Alamat E-mel</label>
+                    <input type="email" required placeholder="contoh@gmail.com">
+                </div>
+                <div class="input-kumpulan">
+                    <label>Mesej / Masalah Anda</label>
+                    <textarea rows="4" required placeholder="Ceritakan bagaimana kami boleh membantu anda..."></textarea>
+                </div>
+                <button type="submit" class="btn-mula" style="background: #119c56; width: 100%; border: none; padding: 12px; cursor: pointer;">
+                    Hantar Tiket Sokongan
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+  (function(d, t) {
+      var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+      v.onload = function() {
+        window.voiceflow.chat.load({
+          verify: { projectID: '6a5470ff37d720d33beb549c' },
+          url: 'https://general-runtime.voiceflow.com',
+          voice: {
+            url: "https://runtime-api.voiceflow.com"
+          }
+        });
+      }
+      v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+  })(document, 'script');
+</script>
+<script>
+      // Fungsi untuk paksa tingkap chat Voiceflow terbuka bila butang hijau atas diklik
+      function bukaSembangAI() {
+          if (window.voiceflow && window.voiceflow.chat) {
+              window.voiceflow.chat.open();
+          } else {
+              alert("Otak AI sedang memuatkan diri... Sila cuba lagi dalam 2 saat!");
+          }
+      }
+
+      // Fungsi hantar borang tiket bahagian bawah (ejen manusia)
+      function hantarAduan(e) {
+          e.preventDefault();
+          alert("✅ Tiket Sokongan Berjaya Dihantar!");
+          e.target.reset();
+      }
+    </script>
+</body>
+</html>
