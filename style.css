@@ -675,3 +675,68 @@ button:active {
     border-radius: 20px;
     cursor: pointer;
 }
+
+/* --- CSS UNTUK SCREEN BESAR (LAPTOP) --- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 5%;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+/* Sorok butang tiga garis di laptop */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background-color: var(--text-color); /* Ikut variable warna tema awak */
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+/* --- CSS UNTUK SKRIN TELEFON (MOBILE) --- */
+@media screen and (max-width: 768px) {
+  /* Paparkan butang tiga garis di fon */
+  .menu-toggle {
+    display: flex;
+  }
+
+  /* Susun menu ke bawah secara menegak dan sorokkan dulu */
+  .nav-links {
+    display: none; /* Sorok menu asal */
+    flex-direction: column; /* Susun ke bawah */
+    width: 100%;
+    position: absolute;
+    top: 60px; /* Jarak dari atas navbar */
+    left: 0;
+    background-color: var(--bg-color);
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+
+  .nav-links li {
+    margin: 15px 0; /* Jarak antara menu ke bawah */
+  }
+
+  /* Kelas aktif yang akan dipanggil oleh JavaScript nanti */
+  .nav-links.active {
+    display: flex; /* Paparkan semula menu bila butang diklik */
+  }
+}
