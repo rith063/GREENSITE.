@@ -305,12 +305,13 @@ function prosesMesej() {
         content.scrollTop = content.scrollHeight;
     }, 800);
 }
-
-const mobileMenuBtn = document.getElementById('mobile-menu');
-const navList = document.getElementById('nav-list');
-
-// Bila butang tiga garis diklik
-mobileMenuBtn.addEventListener('click', () => {
-  // Dia akan tambah atau buang class 'active' pada menu
-  navList.classList.toggle('active');
-});
+<script>
+function toggleMenu() {
+    document.getElementById("mobileMenu").classList.toggle("show");
+}
+</script>
+<script>
+function toggleMenu() {
+    document.getElementById("mainNav").classList.toggle("show");
+}
+</script>
