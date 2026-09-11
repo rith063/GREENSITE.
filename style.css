@@ -732,25 +732,6 @@ nav a {
         font-size: 30px;
     }
 
-    /* Tunjukkan 3 garis */
-    .menu-btn {
-        display: block;
-    }
-
-    /* Menu asal disorok */
-    nav {
-        display: none;
-        flex-direction: column;
-        gap: 0;
-        margin-top: 20px;
-        text-align: center;
-    }
-
-    /* Bila menu dibuka */
-    nav.show {
-        display: flex;
-    }
-
     nav a {
         padding: 15px;
         border-top: 1px solid rgba(255,255,255,0.2);
