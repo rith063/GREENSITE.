@@ -811,17 +811,6 @@ nav a:hover {
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* HAMBURGER */
-.menu-btn {
-    display: none;
-    background: none;
-    border: none;
-    color: white;
-    font-size: 32px;
-    cursor: pointer;
-}
-
-
 /* ===== PHONE ===== */
 
 @media (max-width: 768px) {
@@ -839,32 +828,6 @@ nav a:hover {
 
     .logo:first-letter {
         font-size: 35px;
-    }
-
-    /* ☰ keluar */
-    .menu-btn {
-        display: block;
-        position: absolute;
-        left: 20px;
-    }
-
-    /* menu sorok */
-    nav {
-        display: none;
-        position: absolute;
-        top: 75px;
-        left: 0;
-        width: 100%;
-        background: #003b29;
-
-        flex-direction: column;
-        gap: 0;
-        z-index: 1000;
-    }
-
-    /* menu bila tekan ☰ */
-    nav.show {
-        display: flex;
     }
 
     nav a {
