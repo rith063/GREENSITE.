@@ -305,3 +305,14 @@ function prosesMesej() {
         content.scrollTop = content.scrollHeight;
     }, 800);
 }
+// =========================================
+// MENU HAMBURGER PHONE
+// =========================================
+
+function toggleMenu() {
+    const menu = document.getElementById("mobileMenu");
+
+    if (menu) {
+        menu.classList.toggle("show");
+    }
+}
