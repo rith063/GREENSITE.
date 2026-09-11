@@ -305,13 +305,3 @@ function prosesMesej() {
         content.scrollTop = content.scrollHeight;
     }, 800);
 }
-<script>
-function toggleMenu() {
-    document.getElementById("mobileMenu").classList.toggle("show");
-}
-</script>
-<script>
-function toggleMenu() {
-    document.getElementById("mainNav").classList.toggle("show");
-}
-</script>
