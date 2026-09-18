@@ -134,13 +134,13 @@ function findLocation() {
     let query = `
     [out:json];
     (
-      node["amenity"="recycling"](around:40000,${lat},${lon});
-      way["amenity"="recycling"](around:40000,${lat},${lon});
-      relation["amenity"="recycling"](around:40000,${lat},${lon});
-      node["amenity"="waste_transfer_station"](around:40000,${lat},${lon});
-      way["waste_transfer_station"](around:40000,${lat},${lon});
-      node["shop"="scrap_yard"](around:40000,${lat},${lon});
-      way["shop"="scrap_yard"](around:40000,${lat},${lon});
+      node["amenity"="recycling"](around:20000,${lat},${lon});
+      way["amenity"="recycling"](around:20000,${lat},${lon});
+      relation["amenity"="recycling"](around:20000,${lat},${lon});
+      node["amenity"="waste_transfer_station"](around:20000,${lat},${lon});
+      way["waste_transfer_station"](around:20000,${lat},${lon});
+      node["shop"="scrap_yard"](around:20000,${lat},${lon});
+      way["shop"="scrap_yard"](around:20000,${lat},${lon});
     );
     out center;
     `;
@@ -152,7 +152,7 @@ function findLocation() {
     .then(data => {
       let elements = data.elements;
       if (!elements.length) {
-        alert("Tiada pusat kitar semula dijumpai dalam radius 40km.");
+        alert("Tiada pusat kitar semula dijumpai dalam radius 20km.");
         return;
       }
 
